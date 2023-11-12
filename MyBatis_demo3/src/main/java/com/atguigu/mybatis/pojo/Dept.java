@@ -1,8 +1,9 @@
 package com.atguigu.mybatis.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Dept {
+public class Dept implements Serializable {
 
     private Integer did;
     private String deptName;
