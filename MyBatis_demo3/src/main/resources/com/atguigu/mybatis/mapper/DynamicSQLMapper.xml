@@ -50,14 +50,13 @@
                          )
 
 </delete>
+
 <!--    int insertMoreByList(List<Emp> emps);-->
 <insert id="insertMoreByList">
     insert into t_emp values
-                          <foreach collection="emps" item="emp" separator=",">
-                       (null,#{emp.empName},#{emp.age},#{emp.sex},#{emp.email},null)
-
-                          </foreach>
-
+    <foreach collection="emps" item="emp" separator=",">
+    (null,#{emp.empName},#{emp.age},#{emp.sex},#{emp.email},null)
+    </foreach>
 </insert>
 
 </mapper>

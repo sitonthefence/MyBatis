@@ -18,7 +18,6 @@ select  * from t_dept where  did=#{did}
             <result property="age" column="age"></result>
             <result property="sex" column="sex"></result>
             <result property="email" column="email"></result>
-
         </collection>
     </resultMap>
 
