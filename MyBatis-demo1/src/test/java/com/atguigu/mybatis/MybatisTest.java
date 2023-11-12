@@ -42,4 +42,16 @@ public class MybatisTest {
       list.forEach(System.out::println);
    }
 
+   @Test
+   public void testSelect() throws IOException {
+      InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+      SqlSessionFactoryBuilder sqlSessionFactoryBuilder=new SqlSessionFactoryBuilder();
+      SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is);
+      SqlSession sqlSession = sqlSessionFactory.openSession(true);
+      UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+      User user = mapper.jiangYangGetUserById();
+      System.out.println(user);
+
+   }
+
 }

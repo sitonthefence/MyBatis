@@ -8,10 +8,13 @@ import java.util.List;
 public interface UserMapper {
 
     int insertUser();
+
     void updateUser();
     void deleteUser();
 
     User getUserById();
+
+    User jiangYangGetUserById();
     List<User> getAllUser();
 
 

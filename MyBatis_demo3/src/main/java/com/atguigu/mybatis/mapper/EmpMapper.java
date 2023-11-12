@@ -13,6 +13,8 @@ public interface EmpMapper {
 
     Emp getEmpAndDeptByStepOne(@Param("eid") Integer eid);
 
+    List<Emp> jiangYangGetAllEmpAndDept();
+
     List<Emp>  getDeptAndEmpByStepTwo(@Param("did") Integer did);
 
 }

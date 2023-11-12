@@ -27,14 +27,31 @@ public class ResultMapTest {
         Emp empAndDept = mapper.getEmpAndDept(1);
         System.out.println(empAndDept);
 
+    }
+
+    @Test
+    public void testJiangYangGetAllEmpAndDept(){
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        List<Emp> emps = mapper.jiangYangGetAllEmpAndDept();
+        System.out.println(emps);
+
 
     }
+
+
+
+
+
+
+
+
     @Test
     public void testGetEmpAndDeptByStep(){
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Emp empAndDept = mapper.getEmpAndDeptByStepOne(1);
-        System.out.println(empAndDept.getEmpName());
+        System.out.println(empAndDept);
     }
     @Test
     public void testGetDeptAndEmp(){
